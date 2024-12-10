@@ -4,7 +4,7 @@ from .models import Recipes, Events, Entrepreuners, Establishments, People, Prog
 class RecipesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipes
-        fields = ('id','name','description','ingredients','instructions')
+        fields = ('id','name','description','ingredients','instructions', 'image')
 
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:

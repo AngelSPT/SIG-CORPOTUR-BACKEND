@@ -11,6 +11,7 @@ class Recipes(models.Model):
     description = models.TextField()
     ingredients = models.TextField()
     instructions = models.TextField()
+    image = models.TextField()
 
 class Establishments(models.Model):
     name = models.CharField(max_length=50)
@@ -34,9 +35,9 @@ class Users(models.Model):
 class People(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    document_id = models.IntegerField()
+    document_id = models.CharField(max_length=50)
     birth_date = models.DateField()
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=50)
     gender = models.CharField(max_length=50)
     
 class Programs(models.Model):
